@@ -1,9 +1,9 @@
 
-export INSTANCE_NAME=
-export ZONE=
-export REGION=
-export PORT=
-export FIREWALL_NAME=
+export INSTANCE_NAME= <br>
+export ZONE= <br>
+export REGION=<br>
+export PORT=<br>
+export FIREWALL_NAME=<br>
 
 gcloud compute instances create $INSTANCE_NAME \
           --network nucleus-vpc \
