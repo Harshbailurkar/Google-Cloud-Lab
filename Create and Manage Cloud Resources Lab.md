@@ -1,10 +1,11 @@
-
+## step1:Assign your Values to below variables and paste it in console and press Enter.
 export INSTANCE_NAME= <br>
 export ZONE= <br>
 export REGION=<br>
 export PORT=<br>
 export FIREWALL_NAME=<br>
 
+## now paste all the code in console and wait till execute. after execute wait for 5-7 min for verifying task.
 gcloud compute instances create $INSTANCE_NAME \
           --network nucleus-vpc \
           --zone $ZONE  \
