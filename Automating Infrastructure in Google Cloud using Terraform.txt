@@ -1,5 +1,5 @@
 
-Task 1
+// Task 1
 
 
 touch main.tf
@@ -23,7 +23,7 @@ cd
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Go To variable.tf and paste following content:
+// Go To variable.tf and paste following content:
 
 
 variable "region" {
@@ -41,7 +41,7 @@ variable "project_id" {
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Add following to main.tf
+// Add following to main.tf
 
 
 
@@ -69,13 +69,13 @@ module "instances" {
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Run in cloudshell
+// Run in cloudshell
 
 terraform init
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Go to modules/instances/instances.tf then paste following content
+// Go to modules/instances/instances.tf then paste following content
 
 
 
@@ -122,7 +122,7 @@ resource "google_compute_instance" "tf-instance-2" {
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Run in cloud shell
+// Run in cloud shell
 
 terraform import module.instances.google_compute_instance.tf-instance-1 <Instance ID - 1>
 
@@ -133,7 +133,7 @@ terraform apply
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Add following to storage.tf
+// Add following to storage.tf
 
 
 
@@ -147,7 +147,7 @@ resource "google_storage_bucket" "storage-bucket" {
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Add following to main.tf
+// Add following to main.tf
 
 module "storage" {
   source     = "./modules/storage"
@@ -155,14 +155,14 @@ module "storage" {
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Run cloud shell : 
+// Run cloud shell : 
 
 terraform init
 terraform apply
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Make change at start in main.tf
+// Make change at start in main.tf
 
 
 terraform {
@@ -180,13 +180,13 @@ terraform {
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-run in cloud shell
+// run in cloud shell
 
 terraform init
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Add following to instance.tf
+// Add following to instance.tf
 
 
 resource "google_compute_instance" "****Instance Name****" {
@@ -212,7 +212,7 @@ resource "google_compute_instance" "****Instance Name****" {
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Run cloud shell : 
+// Run cloud shell : 
 
 terraform init
 terraform apply
@@ -224,7 +224,7 @@ terraform plan
 terraform apply
 
 
-Go to instance.tf & remove instance 3
+// Go to instance.tf & remove instance 3
 
 terraform apply
 
@@ -232,9 +232,9 @@ terraform apply
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Task 6:
+// Task 6:
 
-Go to main.tf
+// Go to main.tf
 
 
 module "vpc" {
@@ -264,7 +264,7 @@ module "vpc" {
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-run cloud shell :
+// run cloud shell :
 terraform init
 terraform apply
 
@@ -272,7 +272,7 @@ terraform apply
 
 
 
-Go to Instance.tf and Replace everything with following:
+// Go to Instance.tf and Replace everything with following:
 
 
 
@@ -351,7 +351,7 @@ module "vpc" {
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-run cloud_shell 
+// run cloud_shell 
 
 terraform init
 terraform apply
@@ -359,7 +359,7 @@ terraform apply
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Go to main.tf and add the following 
+// Go to main.tf and add the following 
 
 
 
@@ -380,7 +380,7 @@ resource "google_compute_firewall" "tf-firewall"{
 
 
 
-run cloud shell
+// run cloud shell
 
 terraform init
 terraform apply
